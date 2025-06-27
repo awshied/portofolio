@@ -64,7 +64,7 @@ const ContactSection = () => {
 
         <div className="mt-16 grid-12-cols">
           <div className="xl:col-span-5">
-            <div className="flex-center card-border rounded-xl p-10">
+            <div className="flex-center card-border rounded-xl p-2 md:p-10">
               <form
                 onSubmit={handleSubmit}
                 className="w-full flex flex-col gap-7"

@@ -352,7 +352,7 @@ const expCards = [
   },
   {
     review:
-      "Secara teknis, Aryo menunjukkan kemampuan menggabungkan fitur visualisasi data dan enkripsi dalam proyek berbasis web.",
+      "Oke dia cukup mampu menggabungkan fitur visualisasi data dan enkripsi dalam proyek berbasis web.",
     imgPath: "/images/angular-exp.png",
     logoPath: "/images/Angular.png",
     location: "Indonesia",
@@ -405,7 +405,7 @@ const testimonials = [
     imgPath: "/images/client1.png",
   },
   {
-    name: "Bagas Tri Prakoso",
+    name: "Bagas Dwi",
     mentions: "@bagatrip80",
     location: "Indonesia",
     review:

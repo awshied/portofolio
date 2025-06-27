@@ -97,7 +97,7 @@ const Hero = () => {
               <audio ref={audioRef} src="/sounds/myrecord.mp3" preload="auto" />
               <div className="separator"></div>
               <small
-                className="text-white md:text-[32px] text-[24px] py-1 font-semibold"
+                className="text-white lg:text-[32px] md:text-[27px] text-[20px] py-1 font-semibold"
                 style={{
                   fontFamily: "var(--font-lobster)",
                   textShadow: "10px 10px 5px hsla(0, 0%, 0%, 1)",

@@ -43,7 +43,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="flex flex-col justify-center">
-          <p className="text-center lg:text-end">
+          <p className="text-center lg:text-end sm:text-[15px] text-[14px]">
             © {new Date().getFullYear()}{" "}
             <span className="text-gold-100">Aryo Wibisono </span>| All rights
             reserved.

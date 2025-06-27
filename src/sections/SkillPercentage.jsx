@@ -104,7 +104,7 @@ const SkillPercentage = () => {
                         alt="role icon"
                         className="w-8 sm:w-10 md:w-12"
                       />
-                      <h2 className="text-2xl sm:text-3xl font-bold">
+                      <h2 className="text-[21px] sm:text-3xl font-bold">
                         {percentage.role}
                       </h2>
                     </div>
