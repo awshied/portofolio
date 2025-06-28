@@ -28,11 +28,12 @@ const ShowcaseSection = () => {
         {
           y: 0,
           opacity: 1,
-          duration: 1,
-          delay: 0.3 * (index + 1),
+          duration: 0.5,
+          delay: 0.1 * index,
           scrollTrigger: {
             trigger: card,
             start: "top bottom-=100",
+            once: true,
           },
         }
       );
@@ -40,7 +41,7 @@ const ShowcaseSection = () => {
     gsap.fromTo(
       sectionRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 1.5 }
+      { opacity: 1, duration: 0.8 }
     );
   }, []);
 

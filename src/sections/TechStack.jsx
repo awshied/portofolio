@@ -16,19 +16,23 @@ const TechStack = () => {
       {
         y: 0,
         opacity: 1,
-        duration: 1,
+        duration: 0.5,
         ease: "power2.inOut",
         stagger: 0.2,
         scrollTrigger: {
           trigger: "#skills",
           start: "top center",
+          once: true,
         },
       }
     );
   });
 
   return (
-    <section id="skills" className="flex-center section-padding">
+    <section
+      id="skills"
+      className="hidden lg:flex justify-center items-center section-padding"
+    >
       <div
         className="w-full h-full md:px-10 px-5"
         style={{ fontFamily: "var(--font-poppins)" }}

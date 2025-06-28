@@ -33,17 +33,17 @@ const HeroExperience = () => {
   }
 
   return (
-    <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+    <Canvas dpr={[1, 1.5]} camera={{ position: [0, 0, 15], fov: 45 }}>
       <OrbitControls
         enablePan={false}
-        enableZoom={!isTablet}
+        enableZoom={!isTablet || !isMobile}
         maxDistance={20}
         minDistance={5}
         minPolarAngle={Math.PI / 5}
         maxPolarAngle={Math.PI / 2}
       />
       <HeroLights />
-      <Particles count={100} />
+      <Particles count={isMobile || isTablet ? 50 : 100} />
       <group scale={scale} position={position} rotation={[0, -Math.PI / 4, 0]}>
         <Room />
       </group>

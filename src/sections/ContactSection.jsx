@@ -38,7 +38,7 @@ const ContactSection = () => {
 
       setFormData({ name: "", email: "", message: "" });
       setShowSuccess(true);
-      setTimeout(() => setShowSuccess(false), 3000);
+      setTimeout(() => setShowSuccess(false), 6000);
     } catch (error) {
       console.log("EmailJS tidak berfungsi,", error);
     } finally {
@@ -49,7 +49,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="flex-center section-padding relative">
       {showSuccess && (
-        <div className="fixed bottom-5 left-5 bg-blue-150 text-gold-100 px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in">
+        <div className="fixed bottom-5 left-5 lg:text-[16px] text-[12px] bg-blue-150 text-gold-100 px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in">
           ✅ Oke, pesan lu baru aja dikirim
         </div>
       )}
@@ -123,7 +123,7 @@ const ContactSection = () => {
               </form>
             </div>
           </div>
-          <div className="xl:col-span-7 min-h-96">
+          <div className="hidden lg:block xl:col-span-7 min-h-96">
             <div className="bg-gold-100 w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
               <ContactExperience />
             </div>

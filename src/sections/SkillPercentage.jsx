@@ -46,12 +46,13 @@ const SkillPercentage = () => {
       gsap.from(".skill-section", {
         opacity: 0,
         y: 50,
-        duration: 1,
+        duration: 0.5,
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".skill-section",
-          start: "top 80%", // mulai saat 80% dari viewport
-          toggleActions: "play none none reverse", // animasi hanya saat masuk
+          start: "top 80%",
+          once: true,
+          toggleActions: "play none none reverse",
         },
       });
     });
@@ -110,12 +111,12 @@ const SkillPercentage = () => {
                     </div>
                     <hr className="mb-4 border-purple-400" />
 
-                    <div className="flex items-center justify-between text-xs sm:text-sm text-white-25 mb-4">
+                    <div className="flex items-center justify-between text-[10px] md:text-sm text-white-25 mb-6">
                       <span>Overall : ⭐ {percentage.overall} / 10</span>
                       <span>Status : {percentage.status}</span>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4.5 lg:gap-6">
                       {percentage.languagePercentage.map((lang, index) => (
                         <StatBar
                           key={index}

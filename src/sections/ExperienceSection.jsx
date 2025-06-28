@@ -15,11 +15,12 @@ const ExperienceSection = () => {
         xPercent: -100,
         opacity: 0,
         transformOrigin: "left left",
-        duration: 1,
+        duration: 0.5,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: card,
           start: "top 80%",
+          once: true,
         },
       });
     });
@@ -31,6 +32,7 @@ const ExperienceSection = () => {
         trigger: ".timeline",
         start: "top center",
         end: "70% center",
+        once: true,
         onUpdate: (self) => {
           gsap.to(".timeline", {
             scaleY: 1 - self.progress,
@@ -43,11 +45,12 @@ const ExperienceSection = () => {
       gsap.from(text, {
         xPercent: 0,
         opacity: 0,
-        duration: 1,
+        duration: 0.5,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: text,
           start: "top 60%",
+          once: true,
         },
       });
     });
@@ -71,7 +74,7 @@ const ExperienceSection = () => {
             {expCards.map((card, index) => (
               <div key={card.title} className="exp-card-wrapper">
                 <div className="xl:w-2/6">
-                  <GlowCards card={card} index={index}>
+                  <GlowCards key={index} card={card} index={index}>
                     <div>
                       <img
                         src={card.imgPath}
@@ -101,7 +104,8 @@ const ExperienceSection = () => {
                         />
                       </div>
                       <div>
-                        <h1 className="font-semibold md:text-3xl text-xl">
+                        <h1 className="font-semibold md:text-3xl text-[18px]">
+                          <span className="text-gold-100">{card.role}</span> -{" "}
                           {card.title}
                         </h1>
                         <p className="my-5 text-white-25">🗓️ {card.date}</p>

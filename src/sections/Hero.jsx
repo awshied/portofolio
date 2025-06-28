@@ -4,27 +4,8 @@ import Button from "../components/Button";
 import HeroExperience from "../components/HeroModels/HeroExperience";
 import TypingEffect from "../components/TypingEffect";
 import { variables, words } from "../constants";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 
 const Hero = () => {
-  useGSAP(() => {
-    gsap.fromTo(
-      ".hero-text h1",
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2,
-        duration: 1,
-        ease: "power2.inOut",
-      }
-    );
-  });
-
   const audioRef = useRef(null);
 
   const handleMicClick = () => {
@@ -46,12 +27,12 @@ const Hero = () => {
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
             <div
-              className="hero-text"
+              className="hero-text lg:gap-0 gap-2"
               style={{
                 textShadow: "10px 10px 5px hsla(0, 0%, 0%, 0.6)",
               }}
             >
-              <h1>
+              <h1 className="text-[27px] md:text-[60px]">
                 Mengolah
                 <span className="slide">
                   <span className="wrapper">
@@ -71,8 +52,10 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1>Menjadi Solusi yang</h1>
-              <h1>
+              <h1 className="text-[27px] md:text-[60px]">
+                Menjadi Solusi yang
+              </h1>
+              <h1 className="text-[27px] md:text-[60px]">
                 <span className="slide px-0 my-2">
                   <span className="wrapper">
                     {variables.map((variable) => (
@@ -97,7 +80,7 @@ const Hero = () => {
               <audio ref={audioRef} src="/sounds/myrecord.mp3" preload="auto" />
               <div className="separator"></div>
               <small
-                className="text-white lg:text-[32px] md:text-[27px] text-[20px] py-1 font-semibold"
+                className="text-white lg:text-[32px] md:text-[27px] text-[16px] py-2 font-semibold"
                 style={{
                   fontFamily: "var(--font-lobster)",
                   textShadow: "10px 10px 5px hsla(0, 0%, 0%, 1)",

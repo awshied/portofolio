@@ -21,10 +21,11 @@ const FeatureCards = () => {
             opacity: 1,
             duration: 0.8,
             ease: "power2.out",
-            delay: index * 0.2,
+            delay: index * 0.1,
             scrollTrigger: {
               trigger: card,
               start: "top 85%",
+              once: true,
             },
           }
         );
@@ -36,11 +37,12 @@ const FeatureCards = () => {
         { opacity: 0 },
         {
           opacity: 1,
-          duration: 1.2,
+          duration: 0.8,
           ease: "power1.out",
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 90%",
+            once: true,
           },
         }
       );

@@ -16,25 +16,27 @@ const Testimonials = () => {
         />
 
         <div className="lg:columns-3 md:columns-2 columns-1 mt-16">
-          {testimonials.map(({ imgPath, name, mentions, review, location }) => (
-            <GlowCards card={{ review, location }}>
-              <div className="flex items-center gap-3">
-                <div>
-                  <img
-                    src={imgPath}
-                    alt={name}
-                    style={{
-                      filter: "drop-shadow(8px 5px 6px hsla(0, 0%, 0%, 0.8))",
-                    }}
-                  />
+          {testimonials.map(
+            ({ imgPath, name, mentions, review, location, index }) => (
+              <GlowCards key={index} card={{ review, location }}>
+                <div className="flex items-center gap-3">
+                  <div>
+                    <img
+                      src={imgPath}
+                      alt={name}
+                      style={{
+                        filter: "drop-shadow(8px 5px 6px hsla(0, 0%, 0%, 0.8))",
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold">{name}</p>
+                    <p className="text-white-25">{mentions}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-bold">{name}</p>
-                  <p className="text-white-25">{mentions}</p>
-                </div>
-              </div>
-            </GlowCards>
-          ))}
+              </GlowCards>
+            )
+          )}
         </div>
       </div>
     </section>

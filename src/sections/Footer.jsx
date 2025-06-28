@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="flex items-center">
             <img
               src="/images/logo-aw.png"
-              className="h-16 bg-blue-150"
+              className="lg:h-16 h-26 bg-blue-150"
               style={{
                 borderTopLeftRadius: "5px",
                 borderBottomLeftRadius: "5px",
@@ -20,7 +20,7 @@ const Footer = () => {
             />
             <figure style={{ boxShadow: "5px 5px 20px hsla(0, 0%, 0%, 0.8)" }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63439.54842584902!2d106.80157918526983!3d-6.397638560202235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb94dd3cde6b%3A0x136bba1bb1db0a01!2sKec.%20Sukmajaya%2C%20Kota%20Depok%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1750760738308!5m2!1sid!2sid"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63439.54842584902!2d106.80157918526983!3d-6.397638560202235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb94dd3cde6b%3A0x136bba1bb1db0a01!2sKec.%20Sukmajaya%2C%20Kota%20Depok%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1751100432343!5m2!1sid!2sid"
                 style={{
                   border: 0,
                   borderTopRightRadius: "5px",
@@ -30,7 +30,7 @@ const Footer = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="h-15 w-full"
+                className="lg:h-15 h-25 w-full"
               ></iframe>
             </figure>
           </div>

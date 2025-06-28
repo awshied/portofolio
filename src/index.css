@@ -177,6 +177,12 @@ section {
     font-size: 1rem;
   }
 
+  .card-feature,
+  .project,
+  .timeline-card {
+    will-change: transform, opacity;
+  }
+
   .cycle {
     @apply absolute border-2 border-gold-100 bg-blue-150 rounded-full flex items-center justify-center;
   }
@@ -190,7 +196,7 @@ section {
   }
 
   .hero-3d-layout {
-    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
+    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 md:top-60 top-24 xl:-right-20 right-0;
   }
 
   .navbar {
