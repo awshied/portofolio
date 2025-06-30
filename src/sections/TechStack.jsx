@@ -55,7 +55,7 @@ const TechStack = () => {
                 </div>
 
                 <div className="padding-x w-full">
-                  <p className="pb-10">{icon.name}</p>
+                  <p className="pb-10 flex text-center">{icon.name}</p>
                 </div>
               </div>
             </div>

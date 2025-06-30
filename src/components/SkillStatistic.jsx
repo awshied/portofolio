@@ -60,9 +60,9 @@ const SkillStatistic = ({ roleData }) => {
   };
 
   // Responsif: height, font size, radius
-  const chartHeight = getResponsiveSize(250, 300, 400, 500);
-  const pointRadius = getResponsiveSize(1, 3, 5, 7);
-  const pointFontSize = getResponsiveSize(8, 11, 12, 13);
+  const chartHeight = getResponsiveSize(150, 300, 300, 450);
+  const pointRadius = getResponsiveSize(1, 3, 5, 6);
+  const pointFontSize = getResponsiveSize(7, 11, 13, 13);
 
   if (!Array.isArray(roleData?.languagePercentage)) {
     return <div className="text-red-500">Data tidak tersedia</div>;
@@ -115,7 +115,7 @@ const SkillStatistic = ({ roleData }) => {
         },
         pointLabels: {
           font: {
-            size: pointFontSize + 0.5,
+            size: pointFontSize + 3,
             weight: "500",
           },
           color: "#c084fc",
@@ -157,11 +157,11 @@ const SkillStatistic = ({ roleData }) => {
         cornerRadius: 8,
         displayColors: false,
         titleFont: {
-          size: pointFontSize + 2,
+          size: pointFontSize,
           weight: "bold",
         },
         bodyFont: {
-          size: pointFontSize + 1,
+          size: pointFontSize,
         },
         padding: 12,
         callbacks: {

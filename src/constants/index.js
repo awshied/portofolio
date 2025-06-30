@@ -71,27 +71,15 @@ const percentages = [
         value: 21,
       },
       {
-        languageImg: "/images/Threejs-fill.png",
-        name: "Three.js",
-        statsBar: 70,
-        value: 70,
-      },
-      {
         languageImg: "/images/Chartjs-fill.png",
         name: "Chart.js",
         statsBar: 53,
         value: 53,
       },
-      {
-        languageImg: "/images/D3-fill.png",
-        name: "D3.js",
-        statsBar: 67,
-        value: 67,
-      },
     ],
     recentProject: 5,
-    overall: 5.3,
-    status: "🗿 Bad",
+    overall: 4.6,
+    status: "☠️ Awful",
   },
   {
     id: 2,
@@ -101,26 +89,14 @@ const percentages = [
       {
         languageImg: "/images/Flutter.png",
         name: "Flutter",
-        statsBar: 65,
-        value: 65,
-      },
-      {
-        languageImg: "/images/Kotlin-fill.png",
-        name: "Kotlin",
-        statsBar: 64,
-        value: 64,
+        statsBar: 55,
+        value: 55,
       },
       {
         languageImg: "/images/React.png",
         name: "React-Native",
-        statsBar: 92,
-        value: 92,
-      },
-      {
-        languageImg: "/images/Swift-fill.png",
-        name: "Swift",
-        statsBar: 30,
-        value: 30,
+        statsBar: 82,
+        value: 82,
       },
       {
         languageImg: "/images/Mongodb-fill.png",
@@ -136,8 +112,8 @@ const percentages = [
       },
     ],
     recentProject: 3,
-    overall: 6.9,
-    status: "🗿 Bad",
+    overall: 7.5,
+    status: "😐 Fair",
   },
   {
     id: 3,
@@ -147,8 +123,8 @@ const percentages = [
       {
         languageImg: "/images/Php-fill.png",
         name: "Php",
-        statsBar: 74,
-        value: 74,
+        statsBar: 64,
+        value: 64,
       },
       {
         languageImg: "/images/Typescript-fill.png",
@@ -157,22 +133,10 @@ const percentages = [
         value: 85,
       },
       {
-        languageImg: "/images/Laravel-fill.png",
-        name: "Laravel",
-        statsBar: 46,
-        value: 46,
-      },
-      {
-        languageImg: "/images/Expressjs-fill.png",
-        name: "Express.js",
-        statsBar: 82,
-        value: 82,
-      },
-      {
         languageImg: "/images/Mysql-fill.png",
         name: "MySQL",
-        statsBar: 93,
-        value: 93,
+        statsBar: 73,
+        value: 73,
       },
       {
         languageImg: "/images/Postgresql-fill.png",
@@ -182,8 +146,8 @@ const percentages = [
       },
     ],
     recentProject: 7,
-    overall: 7.6,
-    status: "😐 Average",
+    overall: 7.5,
+    status: "😐 Fair",
   },
   {
     id: 4,
@@ -193,43 +157,31 @@ const percentages = [
       {
         languageImg: "/images/electronjs-fill.png",
         name: "Electron.js",
-        statsBar: 65,
-        value: 65,
-      },
-      {
-        languageImg: "/images/qt-fill.png",
-        name: "Qt",
-        statsBar: 13,
-        value: 13,
-      },
-      {
-        languageImg: "/images/.net-fill.png",
-        name: ".Net",
-        statsBar: 45,
-        value: 45,
+        statsBar: 50,
+        value: 50,
       },
       {
         languageImg: "/images/tkinter-fill.png",
         name: "Tkinter",
-        statsBar: 58,
-        value: 58,
+        statsBar: 45,
+        value: 45,
       },
       {
         languageImg: "/images/oracle-fill.png",
         name: "Oracle",
-        statsBar: 46,
-        value: 46,
+        statsBar: 56,
+        value: 56,
       },
       {
         languageImg: "/images/sql-server-fill.png",
         name: "SQL Server",
-        statsBar: 65,
-        value: 65,
+        statsBar: 52,
+        value: 52,
       },
     ],
     recentProject: 1,
-    overall: 4.8,
-    status: "☠️ Very Bad",
+    overall: 5.1,
+    status: "🗿 Bad",
   },
 ];
 
@@ -462,9 +414,19 @@ const testimonials = [
 
 const socialImgs = [
   {
-    name: "insta",
+    name: "Instagram",
     url: "https://www.instagram.com/cherrrrrrrryy__/",
-    imgPath: "/images/insta.png",
+    imgPath: "/images/instagram.png",
+  },
+  {
+    name: "Linkedin",
+    url: "https://www.linkedin.com/in/aryo-wibisono-93449b372/",
+    imgPath: "/images/linkedin.png",
+  },
+  {
+    name: "Github",
+    url: "https://github.com/awshied/",
+    imgPath: "/images/github.png",
   },
 ];
 

@@ -47,7 +47,7 @@ section {
 
 @layer components {
   .padding-x {
-    @apply px-5 md:px-10;
+    @apply px-5 md:px-10 flex justify-center;
   }
 
   .padding-x-lg {
@@ -375,10 +375,10 @@ section {
   }
 
   .footer {
-    @apply my-10 md:mt-20 mt-10 text-white-25 px-5 md:px-20 xl:px-20 flex items-center justify-center;
+    @apply my-10 lg:mt-20 mt-10 text-white-25 px-5 md:px-20 xl:px-20 flex items-center justify-center;
 
     .footer-container {
-      @apply grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-0 w-full;
+      @apply grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-0 w-full;
     }
 
     p {
@@ -386,14 +386,14 @@ section {
     }
 
     .socials {
-      @apply flex items-center justify-center gap-5;
+      @apply flex items-center justify-center w-full border-3 border-blue-150;
 
       .icon {
-        @apply flex justify-center items-center rounded-xl size-10 lg:size-12 cursor-pointer transition-all duration-500 hover:bg-blue-150;
+        @apply flex justify-center items-center lg:w-16 w-14.5 cursor-pointer transition-all duration-500 hover:opacity-50;
       }
 
       img {
-        @apply inline-block;
+        @apply inline-flex p-4.5;
       }
     }
   }

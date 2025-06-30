@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import AnimatedCounter from "../components/AnimatedCounter";
 import Button from "../components/Button";
 import HeroExperience from "../components/HeroModels/HeroExperience";
@@ -7,6 +7,15 @@ import { variables, words } from "../constants";
 
 const Hero = () => {
   const audioRef = useRef(null);
+  const texts = [
+    "Front-End Beginner",
+    "Back-End Beginner",
+    "Junior Programmer",
+  ];
+  const [textIndex, setTextIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const handleMicClick = () => {
     const audio = audioRef.current;
@@ -15,6 +24,33 @@ const Hero = () => {
       audio.play();
     }
   };
+
+  useEffect(() => {
+    const currentText = texts[textIndex];
+
+    let typingSpeed = isDeleting ? 100 : 100;
+
+    const timeout = setTimeout(() => {
+      if (isDeleting) {
+        setDisplayedText(currentText.substring(0, charIndex - 1));
+        setCharIndex(charIndex - 1);
+      } else {
+        setDisplayedText(currentText.substring(0, charIndex + 1));
+        setCharIndex(charIndex + 1);
+      }
+
+      if (!isDeleting && charIndex === currentText.length) {
+        setTimeout(() => setIsDeleting(true), 2000);
+      }
+
+      if (isDeleting && charIndex === 0) {
+        setIsDeleting(false);
+        setTextIndex((prev) => (prev + 1) % texts.length);
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, textIndex]);
 
   return (
     <section id="hero" className="relative overflow-hidden">
@@ -70,7 +106,7 @@ const Hero = () => {
             <div className="basic">
               <button
                 onClick={handleMicClick}
-                className="flex rounded-full bg-blue-150 items-center justify-center size-13 md:size-14 translate-y-1 hover:scale-90 transition-transform duration-300 z-20 cursor-pointer"
+                className="flex rounded-full bg-blue-150 items-center justify-center size-10 md:size-14 md:translate-y-1 hover:scale-90 transition-transform duration-300 z-20 cursor-pointer"
                 style={{ boxShadow: "5px 5px 20px hsla(0, 0%, 0%, 0.8)" }}
               >
                 <div className="flex items-center justify-center border-2 border-gold-100 bg-transparent rounded-full size-10 md:size-11">
@@ -80,15 +116,15 @@ const Hero = () => {
               <audio ref={audioRef} src="/sounds/myrecord.mp3" preload="auto" />
               <div className="separator"></div>
               <small
-                className="text-white lg:text-[32px] md:text-[27px] text-[16px] py-2 font-semibold"
+                className="text-white lg:text-[30px] md:text-[24px] text-[12px] py-2 md:py-0 font-semibold"
                 style={{
-                  fontFamily: "var(--font-lobster)",
+                  fontFamily: "var(--font-poppins)",
                   textShadow: "10px 10px 5px hsla(0, 0%, 0%, 1)",
                   letterSpacing: 1,
                   wordSpacing: 2,
                 }}
               >
-                Sistem Informasi
+                {displayedText}
               </small>
             </div>
             <p
