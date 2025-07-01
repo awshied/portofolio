@@ -60,12 +60,12 @@ const Hero = () => {
         <header className="flex flex-col justify-center w-full lg:w-1/2 px-5">
           <div className="flex flex-col gap-7">
             <div
-              className="hero-text lg:gap-0 gap-2"
+              className="hero-text lg:gap-5 gap-2"
               style={{
                 textShadow: "10px 10px 5px hsla(0, 0%, 0%, 0.6)",
               }}
             >
-              <h1 className="text-[26px] md:text-[50px] lg:text-[50px] break-words max-w-full leading-tight">
+              <h1 className="text-[26px] md:text-[40px] lg:text-[40px] break-words max-w-full leading-tight">
                 Mengolah
                 <span className="slide">
                   <span className="wrapper">
@@ -79,7 +79,7 @@ const Hero = () => {
                           alt={word.text}
                           className="w-6 h-6 md:w-10 md:h-10 object-contain"
                         />
-                        <span className="text-gold-100 break-words my-1 md:my-0.5 lg:my-0">
+                        <span className="text-gold-100 break-words my-1 md:my-0.5 lg:my-1.5">
                           {word.text}
                         </span>
                       </span>
@@ -87,10 +87,10 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1 className="text-[26px] md:text-[50px] lg:text-[50px]">
+              <h1 className="text-[26px] md:text-[40px] lg:text-[40px]">
                 Menjadi Solusi yang
               </h1>
-              <h1 className="text-[26px] md:text-[50px] lg:text-[50px]">
+              <h1 className="text-[26px] md:text-[40px] lg:text-[40px]">
                 Fungsional
               </h1>
             </div>
@@ -107,7 +107,7 @@ const Hero = () => {
               <audio ref={audioRef} src="/sounds/myrecord.mp3" preload="auto" />
               <div className="separator"></div>
               <small
-                className="text-white text-sm md:text-2xl lg:text-3xl py-2 font-semibold"
+                className="text-white text-lg md:text-2xl lg:text-3xl py-2 font-semibold"
                 style={{
                   fontFamily: "var(--font-poppins)",
                   textShadow: "10px 10px 5px hsla(0, 0%, 0%, 1)",

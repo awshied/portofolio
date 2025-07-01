@@ -31,7 +31,7 @@ const TechStack = () => {
   return (
     <section
       id="skills"
-      className="flex justify-center items-center section-padding"
+      className="hidden md:flex justify-center items-center section-padding"
     >
       <div
         className="w-full h-full md:px-10 px-5"
@@ -46,7 +46,7 @@ const TechStack = () => {
           {techStackIcons.map((icon) => (
             <div
               key={icon.name}
-              className="card-border tech-card bg-blue-150 overflow-hidden group xl:rounded-full rounded-lg"
+              className="card-border tech-card bg-blue-150 overflow-hidden group xl:rounded-full rounded-xl"
             >
               <div className="tech-card-animated-bg" />
               <div className="tech-card-content">

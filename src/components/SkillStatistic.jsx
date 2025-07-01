@@ -60,7 +60,7 @@ const SkillStatistic = ({ roleData }) => {
   };
 
   // Responsif: height, font size, radius
-  const chartHeight = getResponsiveSize(220, 300, 450, 450);
+  const chartHeight = getResponsiveSize(250, 300, 450, 450);
   const pointRadius = getResponsiveSize(1, 3, 5, 6);
   const pointFontSize = getResponsiveSize(8, 11, 13, 13);
 
