@@ -97,11 +97,13 @@ section {
   }
 
   .hero-layout {
-    @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[90vh] flex xl:items-center items-start justify-center;
+    @apply relative z-10 mt-32 lg:mt-20 flex flex-col lg:flex-row items-start lg:items-center justify-between w-full px-5 md:px-20;
+    height: auto;
+    min-height: 100vh;
   }
 
   .hero-text {
-    @apply flex flex-col justify-center md:text-[50px] text-[30px] font-semibold relative z-10 pointer-events-none;
+    @apply flex flex-col justify-center md:text-[50px] text-[30px] font-semibold relative z-10  pointer-events-none;
     img {
       @apply object-contain;
     }
@@ -111,12 +113,12 @@ section {
   }
 
   .basic {
-    @apply relative flex items-end md:text-[40px] text-[20px] h-18 md:h-30 md:w-150 w-full px-5 mt-5 gap-7.5;
+    @apply relative flex items-center md:text-[40px] text-[20px] px-2 md:px-5 gap-5 md:gap-7.5;
     img {
       @apply md:size-11 size-10 p-2 md:p-2.5 object-contain;
     }
     .separator {
-      @apply h-10 md:h-11 w-[1px] md:w-[2px] bg-white translate-y-[-2px];
+      @apply h-8 md:h-11 w-[1px] md:w-[2px] bg-white translate-y-[-2px];
     }
   }
 
@@ -193,10 +195,6 @@ section {
 
   .hero-badge {
     @apply bg-blue-150 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap shadow-[12px_8px_15px_rgba(0,0,0,0.6)];
-  }
-
-  .hero-3d-layout {
-    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 md:top-60 top-24 xl:-right-20 right-0;
   }
 
   .navbar {

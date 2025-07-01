@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-const TypingEffect = ({ parts, speed = 50, delay = 2000 }) => {
+const TypingEffect = ({ parts, speed = 50, delay = 5000 }) => {
   const [displayedContent, setDisplayedContent] = useState([]);
   const [flatText, setFlatText] = useState([]);
   const [charIndex, setCharIndex] = useState(0);
+  const [hasFinished, setHasFinished] = useState(false);
 
+  // Flatten the parts into individual character entries with class info
   useEffect(() => {
     const flattened = [];
 
@@ -30,29 +32,42 @@ const TypingEffect = ({ parts, speed = 50, delay = 2000 }) => {
     setFlatText(flattened);
   }, [parts]);
 
+  // Typing effect
   useEffect(() => {
-    if (flatText.length === 0) return;
+    if (flatText.length === 0 || hasFinished) return;
 
     let timeout;
 
     if (charIndex < flatText.length) {
       timeout = setTimeout(() => {
         setDisplayedContent((prev) => [...prev, flatText[charIndex]]);
-        setCharIndex(charIndex + 1);
+        setCharIndex((prev) => prev + 1);
       }, speed);
     } else {
       timeout = setTimeout(() => {
-        setDisplayedContent([]);
-        setCharIndex(0);
+        setHasFinished(true); // trigger reset
       }, delay);
     }
 
     return () => clearTimeout(timeout);
-  }, [charIndex, flatText, speed, delay]);
+  }, [charIndex, flatText, speed, delay, hasFinished]);
 
+  // Reset after typing finished
+  useEffect(() => {
+    if (!hasFinished) return;
+
+    const timeout = setTimeout(() => {
+      setDisplayedContent([]);
+      setCharIndex(0);
+      setHasFinished(false);
+    }, 100); // short delay before restarting
+
+    return () => clearTimeout(timeout);
+  }, [hasFinished]);
+
+  // Group characters by class for rendering
   const renderContent = () => {
     const grouped = [];
-
     let currentGroup = [];
     let currentKey = null;
     let currentClass = null;

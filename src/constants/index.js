@@ -40,10 +40,24 @@ const variables = [
 ];
 
 const counterItems = [
-  { value: 1, suffix: "+", label: "Tahun Pengalaman" },
-  { value: 9, suffix: "+", label: "Klien Puas" },
-  { value: 11, suffix: "+", label: "Proyek Selesai" },
-  { value: 2, suffix: "+", label: "Proyek Unggulan" },
+  {
+    value: 1,
+    suffix: "+",
+    imgPath: "/images/pengalaman.png",
+    label: "Tahun Pengalaman",
+  },
+  {
+    value: 9,
+    suffix: "+",
+    imgPath: "/images/klien-puas.png",
+    label: "Klien Puas",
+  },
+  {
+    value: 11,
+    suffix: "+",
+    imgPath: "/images/proyek-selesai.png",
+    label: "Proyek Selesai",
+  },
 ];
 
 const percentages = [
@@ -59,16 +73,16 @@ const percentages = [
         value: 62,
       },
       {
-        languageImg: "/images/Phpchart-fill.png",
-        name: "Php Chart",
-        statsBar: 47,
-        value: 47,
-      },
-      {
         languageImg: "/images/Seaborn-fill.png",
         name: "Seaborn",
         statsBar: 21,
         value: 21,
+      },
+      {
+        languageImg: "/images/Phpchart-fill.png",
+        name: "Php Chart",
+        statsBar: 47,
+        value: 47,
       },
       {
         languageImg: "/images/Chartjs-fill.png",
@@ -87,16 +101,16 @@ const percentages = [
     iconPath: "/images/aplikasi_mobile.png",
     languagePercentage: [
       {
-        languageImg: "/images/Flutter.png",
-        name: "Flutter",
-        statsBar: 55,
-        value: 55,
-      },
-      {
         languageImg: "/images/React.png",
         name: "React-Native",
         statsBar: 82,
         value: 82,
+      },
+      {
+        languageImg: "/images/Flutter.png",
+        name: "Flutter",
+        statsBar: 55,
+        value: 55,
       },
       {
         languageImg: "/images/Mongodb-fill.png",
@@ -121,28 +135,28 @@ const percentages = [
     iconPath: "/images/pengembangan_web.png",
     languagePercentage: [
       {
-        languageImg: "/images/Php-fill.png",
-        name: "Php",
-        statsBar: 64,
-        value: 64,
-      },
-      {
         languageImg: "/images/Typescript-fill.png",
         name: "TypeScript",
         statsBar: 85,
         value: 85,
       },
       {
-        languageImg: "/images/Mysql-fill.png",
-        name: "MySQL",
-        statsBar: 73,
-        value: 73,
+        languageImg: "/images/Php-fill.png",
+        name: "Php",
+        statsBar: 64,
+        value: 64,
       },
       {
         languageImg: "/images/Postgresql-fill.png",
         name: "PostgreSQL",
         statsBar: 77,
         value: 77,
+      },
+      {
+        languageImg: "/images/Mysql-fill.png",
+        name: "MySQL",
+        statsBar: 73,
+        value: 73,
       },
     ],
     recentProject: 7,
@@ -167,16 +181,16 @@ const percentages = [
         value: 45,
       },
       {
-        languageImg: "/images/oracle-fill.png",
-        name: "Oracle",
-        statsBar: 56,
-        value: 56,
-      },
-      {
         languageImg: "/images/sql-server-fill.png",
         name: "SQL Server",
         statsBar: 52,
         value: 52,
+      },
+      {
+        languageImg: "/images/oracle-fill.png",
+        name: "Oracle",
+        statsBar: 56,
+        value: 56,
       },
     ],
     recentProject: 1,

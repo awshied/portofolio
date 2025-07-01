@@ -76,14 +76,7 @@ const ExperienceSection = () => {
                 <div className="xl:w-2/6">
                   <GlowCards key={index} card={card} index={index}>
                     <div>
-                      <img
-                        src={card.imgPath}
-                        style={{
-                          filter:
-                            "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                        }}
-                        alt={card.title}
-                      />
+                      <img src={card.imgPath} alt={card.title} />
                     </div>
                   </GlowCards>
                 </div>

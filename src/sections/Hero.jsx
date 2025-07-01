@@ -1,9 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import AnimatedCounter from "../components/AnimatedCounter";
-import Button from "../components/Button";
-import HeroExperience from "../components/HeroModels/HeroExperience";
 import TypingEffect from "../components/TypingEffect";
-import { variables, words } from "../constants";
+import { words } from "../constants";
 
 const Hero = () => {
   const audioRef = useRef(null);
@@ -27,25 +25,24 @@ const Hero = () => {
 
   useEffect(() => {
     const currentText = texts[textIndex];
-
-    let typingSpeed = isDeleting ? 100 : 100;
+    let typingSpeed = 100;
 
     const timeout = setTimeout(() => {
       if (isDeleting) {
-        setDisplayedText(currentText.substring(0, charIndex - 1));
-        setCharIndex(charIndex - 1);
+        if (charIndex > 0) {
+          setDisplayedText(currentText.substring(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+        } else {
+          setIsDeleting(false);
+          setTextIndex((prev) => (prev + 1) % texts.length);
+        }
       } else {
-        setDisplayedText(currentText.substring(0, charIndex + 1));
-        setCharIndex(charIndex + 1);
-      }
-
-      if (!isDeleting && charIndex === currentText.length) {
-        setTimeout(() => setIsDeleting(true), 2000);
-      }
-
-      if (isDeleting && charIndex === 0) {
-        setIsDeleting(false);
-        setTextIndex((prev) => (prev + 1) % texts.length);
+        if (charIndex < currentText.length) {
+          setDisplayedText(currentText.substring(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+        } else {
+          setTimeout(() => setIsDeleting(true), 1500);
+        }
       }
     }, typingSpeed);
 
@@ -58,9 +55,9 @@ const Hero = () => {
         <img src="/images/bg.png" alt="background" />
       </div>
 
-      <div className="hero-layout">
+      <div className="hero-layout flex flex-col lg:flex-row items-center justify-between lg:gap-10">
         {/* Kiri */}
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+        <header className="flex flex-col justify-center w-full lg:w-1/2 px-5">
           <div className="flex flex-col gap-7">
             <div
               className="hero-text lg:gap-0 gap-2"
@@ -68,67 +65,59 @@ const Hero = () => {
                 textShadow: "10px 10px 5px hsla(0, 0%, 0%, 0.6)",
               }}
             >
-              <h1 className="text-[27px] md:text-[60px]">
+              <h1 className="text-[26px] md:text-[50px] lg:text-[50px] break-words max-w-full leading-tight">
                 Mengolah
                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word) => (
                       <span
                         key={word.text}
-                        className="flex items-center md:gap-3 gap-1 pb-2"
+                        className="flex flex-wrap items-center gap-3 pb-2 max-w-full break-words"
                       >
                         <img
                           src={word.imgPath}
                           alt={word.text}
-                          className="xl:size-18 md:size-15 size-12 md:p-2 p-1"
+                          className="w-6 h-6 md:w-10 md:h-10 object-contain"
                         />
-                        <span className="text-gold-100">{word.text}</span>
+                        <span className="text-gold-100 break-words my-1 md:my-0.5 lg:my-0">
+                          {word.text}
+                        </span>
                       </span>
                     ))}
                   </span>
                 </span>
               </h1>
-              <h1 className="text-[27px] md:text-[60px]">
+              <h1 className="text-[26px] md:text-[50px] lg:text-[50px]">
                 Menjadi Solusi yang
               </h1>
-              <h1 className="text-[27px] md:text-[60px]">
-                <span className="slide px-0 my-2">
-                  <span className="wrapper">
-                    {variables.map((variable) => (
-                      <span key={variable.text}>
-                        <span className="text-gold-100">{variable.text}</span>
-                      </span>
-                    ))}
-                  </span>
-                </span>
+              <h1 className="text-[26px] md:text-[50px] lg:text-[50px]">
+                Fungsional
               </h1>
             </div>
             <div className="basic">
               <button
                 onClick={handleMicClick}
-                className="flex rounded-full bg-blue-150 items-center justify-center size-10 md:size-14 md:translate-y-1 hover:scale-90 transition-transform duration-300 z-20 cursor-pointer"
+                className="flex rounded-full bg-blue-150 items-center justify-center size-9 md:size-13 lg:size-16 hover:scale-90 transition-transform duration-300 z-20 cursor-pointer"
                 style={{ boxShadow: "5px 5px 20px hsla(0, 0%, 0%, 0.8)" }}
               >
-                <div className="flex items-center justify-center border-2 border-gold-100 bg-transparent rounded-full size-10 md:size-11">
+                <div className="flex items-center justify-center border-2 border-gold-100 bg-transparent rounded-full size-8 md:size-11 lg:size-13">
                   <img src="/images/mic.png" />
                 </div>
               </button>
               <audio ref={audioRef} src="/sounds/myrecord.mp3" preload="auto" />
               <div className="separator"></div>
               <small
-                className="text-white lg:text-[30px] md:text-[24px] text-[12px] py-2 md:py-0 font-semibold"
+                className="text-white text-sm md:text-2xl lg:text-3xl py-2 font-semibold"
                 style={{
                   fontFamily: "var(--font-poppins)",
                   textShadow: "10px 10px 5px hsla(0, 0%, 0%, 1)",
-                  letterSpacing: 1,
-                  wordSpacing: 2,
                 }}
               >
                 {displayedText}
               </small>
             </div>
             <p
-              className="text-white-25 md:text-[16px] text-[12px] lg:mr-130 relative z-10 pointer-events-none"
+              className="text-white-25 text-xs md:text-base lg:text-lg relative z-10 pointer-events-none"
               style={{ textShadow: "10px 10px 5px hsla(0, 0%, 0%, 1)" }}
             >
               <TypingEffect
@@ -137,26 +126,26 @@ const Hero = () => {
                   <span className="text-gold-100">profesional</span>,
                   ` dengan elegansi yang tenang."`,
                 ]}
+                speed={50}
+                delay={5000}
               />
             </p>
             <p
-              className="text-white md:text-[16px] text-[13px] lg:mr-130 relative z-10 pointer-events-none"
+              className="text-white md:text-[16px] text-[13px] relative z-10 pointer-events-none"
               style={{ textShadow: "10px 10px 5px hsla(0, 0%, 0%, 1)" }}
             >
               ~ Kata Gue
             </p>
-            <Button
-              className="lg:w-80 lg:h-16 w-60 h-12"
-              id="button"
-              text="Proyek Gue"
-            />
           </div>
         </header>
         {/* Kanan */}
-        <figure>
-          <div className="hero-3d-layout">
-            <HeroExperience />
-          </div>
+        <figure className="w-full lg:w-1/2 flex justify-center items-center lg:translate-y-none">
+          <img
+            src="/images/Minion.png"
+            alt="Hero Minion"
+            loading="lazy"
+            className="object-contain w-[400px] md:w-[600px] lg:w-[450px]"
+          />
         </figure>
       </div>
       <AnimatedCounter />

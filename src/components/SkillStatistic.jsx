@@ -60,9 +60,9 @@ const SkillStatistic = ({ roleData }) => {
   };
 
   // Responsif: height, font size, radius
-  const chartHeight = getResponsiveSize(150, 300, 300, 450);
+  const chartHeight = getResponsiveSize(220, 300, 450, 450);
   const pointRadius = getResponsiveSize(1, 3, 5, 6);
-  const pointFontSize = getResponsiveSize(7, 11, 13, 13);
+  const pointFontSize = getResponsiveSize(8, 11, 13, 13);
 
   if (!Array.isArray(roleData?.languagePercentage)) {
     return <div className="text-red-500">Data tidak tersedia</div>;
@@ -186,7 +186,7 @@ const SkillStatistic = ({ roleData }) => {
 
   return (
     <div
-      className="w-full max-w-none mx-auto p-2 lg:p-6 bg-transparent rounded-xl"
+      className="w-full max-w-none mx-auto lg:p-6 rounded-xl"
       style={{ height: `${chartHeight}px` }}
     >
       <div className="relative w-full h-full">

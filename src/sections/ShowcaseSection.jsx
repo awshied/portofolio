@@ -51,10 +51,7 @@ const ShowcaseSection = () => {
         <div className="showcaselayout">
           {/* KIRI */}
           <div className="first-project-wrapper" ref={project1Ref}>
-            <div
-              className="image-wrapper"
-              style={{ boxShadow: "5px 5px 20px hsla(0, 0%, 0%, 0.8)" }}
-            >
+            <div className="image-wrapper">
               <img src="/images/Proyek1.png" alt="RentState" />
             </div>
             <div className="text-content">
@@ -84,49 +81,31 @@ const ShowcaseSection = () => {
                   src="/images/Typescript.png"
                   className="p-2.5 h-auto w-11 lg:w-12"
                   alt="typescript"
-                  style={{
-                    filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                  }}
                 />
                 <img
                   src="/images/Nextjs.svg"
                   className="p-1 h-auto w-11 lg:w-12"
                   alt="nextjs"
-                  style={{
-                    filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                  }}
                 />
                 <img
                   src="/images/Express.svg"
                   className="p-2 h-auto w-11 lg:w-12"
                   alt="expressjs"
-                  style={{
-                    filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                  }}
                 />
                 <img
                   src="/images/Postgre.svg"
                   className="p-2 h-auto w-11 lg:w-12"
                   alt="postgresql"
-                  style={{
-                    filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                  }}
                 />
                 <img
                   src="/images/Tailwindcss.svg"
                   className="p-2 h-auto w-11 lg:w-12"
                   alt="tailwindcss"
-                  style={{
-                    filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                  }}
                 />
                 <img
                   src="/images/aws.svg"
                   className="p-2 h-auto w-11 lg:w-12"
                   alt="aws"
-                  style={{
-                    filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                  }}
                 />
               </div>
             </div>
@@ -169,49 +148,31 @@ const ShowcaseSection = () => {
                     src="/images/Javascript.png"
                     className="p-2.5 h-auto w-11"
                     alt="javascript"
-                    style={{
-                      filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                    }}
                   />
                   <img
                     src="/images/Vue.png"
                     className="p-2 h-auto w-11"
                     alt="vuejs"
-                    style={{
-                      filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                    }}
                   />
                   <img
                     src="/images/Express.svg"
                     className="p-2 h-auto w-11"
                     alt="expressjs"
-                    style={{
-                      filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                    }}
                   />
                   <img
                     src="/images/Mongodb.png"
                     className="p-2 h-auto w-11"
                     alt="nosql"
-                    style={{
-                      filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                    }}
                   />
                   <img
                     src="/images/Tailwindcss.svg"
                     className="p-2 h-auto w-11"
                     alt="tailwindcss"
-                    style={{
-                      filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                    }}
                   />
                   <img
                     src="/images/Auth.svg"
                     className="p-2 h-auto w-11"
                     alt="authjs"
-                    style={{
-                      filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                    }}
                   />
                 </div>
               </div>
@@ -247,49 +208,31 @@ const ShowcaseSection = () => {
                     src="/images/Php.png"
                     className="p-1.5 h-auto w-11"
                     alt="php"
-                    style={{
-                      filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                    }}
                   />
                   <img
                     src="/images/Jquery.png"
                     className="lg:p-1 p-1.5 h-auto w-11 lg:w-12"
                     alt="jquery"
-                    style={{
-                      filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                    }}
                   />
                   <img
                     src="/images/Laravel.svg"
                     className="p-2 h-auto w-11"
                     alt="laravel"
-                    style={{
-                      filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                    }}
                   />
                   <img
                     src="/images/Mysql.svg"
                     className="p-1.5 h-auto w-11"
                     alt="mysql"
-                    style={{
-                      filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                    }}
                   />
                   <img
                     src="/images/Tailwindcss.svg"
                     className="p-2 h-auto w-11"
                     alt="tailwindcss"
-                    style={{
-                      filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                    }}
                   />
                   <img
                     src="/images/Bootstrap.png"
                     className="p-2 h-auto w-11"
                     alt="bootstrap"
-                    style={{
-                      filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
-                    }}
                   />
                 </div>
               </div>

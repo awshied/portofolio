@@ -88,10 +88,11 @@ const FeatureCards = () => {
           ))}
         </div>
         <p
-          className="text-white-25 mt-10 text-[11px] md:text-[15px] font-semibold italic"
+          className="text-white-25 mt-10 text-[10px] md:text-[15px] font-semibold italic"
           style={{ fontFamily: "var(--font-poppins)" }}
         >
-          Note : Gue Bukan <span className="text-gold-100">Hacker</span>
+          Gue Bukan <span className="text-gold-100">Hacker</span> Atau{" "}
+          <span className="text-gold-100">Tukang Service Hardware</span>
         </p>
       </div>
     </div>
