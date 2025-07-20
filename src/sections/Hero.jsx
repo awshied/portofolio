@@ -160,7 +160,7 @@ const Hero = () => {
             src="/images/Minion.webp"
             alt="Hero Minion"
             loading="lazy"
-            className="absolute top-75 md:top-90 lg:top-30 xl:top-15 object-contain w-[350px] md:w-[600px] lg:w-[450px]"
+            className="absolute top-75 md:top-90 lg:top-30 xl:top-15 object-contain w-[300px] md:w-[600px] lg:w-[450px]"
           />
         </figure>
       </div>
