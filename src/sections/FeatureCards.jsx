@@ -21,11 +21,10 @@ const FeatureCards = () => {
             opacity: 1,
             duration: 0.8,
             ease: "power2.out",
-            delay: index * 0.1,
+            delay: index * 0.2,
             scrollTrigger: {
               trigger: card,
               start: "top 85%",
-              once: true,
             },
           }
         );
@@ -37,22 +36,23 @@ const FeatureCards = () => {
         { opacity: 0 },
         {
           opacity: 1,
-          duration: 0.8,
+          duration: 1.2,
           ease: "power1.out",
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 90%",
-            once: true,
           },
         }
       );
     });
-
     return () => ctx.revert(); // cleanup on unmount
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full flex justify-center px-4">
+    <div
+      ref={sectionRef}
+      className="w-full flex justify-center px-4 md:px-12 lg:px-20"
+    >
       <div className="w-full max-w-screen-xl bg-[#2f363d] rounded-xl shadow-[12px_8px_15px_rgba(0,0,0,0.6)] md:p-20 p-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {abilities.map(({ imgPath, title, desc }) => (
@@ -87,13 +87,13 @@ const FeatureCards = () => {
             </div>
           ))}
         </div>
-        <p
+        {/* <p
           className="text-white-25 mt-10 text-[10px] md:text-[15px] font-semibold italic"
           style={{ fontFamily: "var(--font-poppins)" }}
         >
           Gue Bukan <span className="text-gold-100">Hacker</span> Atau{" "}
           <span className="text-gold-100">Tukang Service Hardware</span>
-        </p>
+        </p> */}
       </div>
     </div>
   );

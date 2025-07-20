@@ -97,9 +97,8 @@ section {
   }
 
   .hero-layout {
-    @apply relative z-10 mt-32 lg:mt-20 flex flex-col lg:flex-row items-start lg:items-center justify-between w-full px-5 md:px-20;
+    @apply relative lg:min-h-[100vh] min-h-[90vh] z-10 mt-32 lg:mt-20 flex flex-col lg:flex-row items-start lg:items-center justify-between w-full px-5 md:px-20;
     height: auto;
-    min-height: 100vh;
   }
 
   .hero-text {

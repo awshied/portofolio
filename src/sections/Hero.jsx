@@ -2,13 +2,15 @@ import { useEffect, useRef, useState } from "react";
 import AnimatedCounter from "../components/AnimatedCounter";
 import TypingEffect from "../components/TypingEffect";
 import { words } from "../constants";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Hero = () => {
   const audioRef = useRef(null);
   const texts = [
     "Front-End Beginner",
     "Back-End Beginner",
-    "Junior Programmer",
+    "Freelance Developer",
   ];
   const [textIndex, setTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
@@ -22,6 +24,14 @@ const Hero = () => {
       audio.play();
     }
   };
+
+  useGSAP(() => {
+    gsap.fromTo(
+      ".hero-text h1",
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
+    );
+  });
 
   useEffect(() => {
     const currentText = texts[textIndex];
@@ -52,7 +62,7 @@ const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="background" />
+        <img src="/images/bg.webp" alt="background" />
       </div>
 
       <div className="hero-layout flex flex-col lg:flex-row items-center justify-between lg:gap-10">
@@ -101,10 +111,10 @@ const Hero = () => {
                 style={{ boxShadow: "5px 5px 20px hsla(0, 0%, 0%, 0.8)" }}
               >
                 <div className="flex items-center justify-center border-2 border-gold-100 bg-transparent rounded-full size-8 md:size-11 lg:size-13">
-                  <img src="/images/mic.png" />
+                  <img src="/images/mic.webp" />
                 </div>
               </button>
-              <audio ref={audioRef} src="/sounds/myrecord.mp3" preload="auto" />
+              <audio ref={audioRef} src="/sounds/aivoice.mp3" preload="auto" />
               <div className="separator"></div>
               <small
                 className="text-white text-lg md:text-2xl lg:text-3xl py-2 font-semibold"
@@ -122,29 +132,35 @@ const Hero = () => {
             >
               <TypingEffect
                 parts={[
-                  `"Hidup itu pada dasarnya sangat sederhana... cukup bernapas, makan, dan tidur... lalu mengulanginya secara `,
-                  <span className="text-gold-100">profesional</span>,
-                  ` dengan elegansi yang tenang."`,
+                  `"`,
+                  <span className="text-gold-100 font-bold">Debugging</span>,
+                  ` itu lebih sulit dari menulis `,
+                  <span className="text-gold-100 font-bold">kode</span>,
+                  `, maka hadapilah dengan konsisten agar menciptakan hasil yang `,
+                  <span className="text-gold-100 font-bold">positif</span>,
+                  ` dan terlihat `,
+                  <span className="text-gold-100 font-bold">profesional</span>,
+                  `."`,
                 ]}
                 speed={50}
                 delay={5000}
               />
             </p>
-            <p
+            {/* <p
               className="text-white md:text-[16px] text-[13px] relative z-10 pointer-events-none"
               style={{ textShadow: "10px 10px 5px hsla(0, 0%, 0%, 1)" }}
             >
               ~ Kata Gue
-            </p>
+            </p> */}
           </div>
         </header>
         {/* Kanan */}
         <figure className="w-full lg:w-1/2 flex justify-center items-center lg:translate-y-none">
           <img
-            src="/images/Minion.png"
+            src="/images/Minion.webp"
             alt="Hero Minion"
             loading="lazy"
-            className="object-contain w-[400px] md:w-[600px] lg:w-[450px]"
+            className="absolute top-75 md:top-90 lg:top-30 xl:top-15 object-contain w-[350px] md:w-[600px] lg:w-[450px]"
           />
         </figure>
       </div>

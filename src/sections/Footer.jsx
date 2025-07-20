@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
         <div className="flex items-center">
           <img
-            src="/images/logo-aw.png"
+            src="/images/logo-aw.webp"
             className="lg:h-18 h-16 bg-blue-150"
             style={{
               borderTopLeftRadius: "10px",

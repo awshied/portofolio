@@ -43,7 +43,7 @@ const NavBar = () => {
       <div className="inner">
         <a className="logo" href="#hero">
           <img
-            src="/images/awlogo.png"
+            src="/images/awlogo.webp"
             className="h-auto w-8 md:w-10"
             style={{
               filter: "drop-shadow(10px 8px 3px hsla(0, 0%, 0%, 1))",
@@ -76,7 +76,7 @@ const NavBar = () => {
             className="flex cursor-pointer hover:opacity-80"
           >
             <img
-              src={isPlaying ? "/images/music.png" : "/images/no-music.png"}
+              src={isPlaying ? "/images/music.webp" : "/images/no-music.webp"}
               alt="music icon"
               className={`${
                 isPlaying ? "p-1.5 md:p-2" : "p-1 opacity-70"
@@ -86,7 +86,7 @@ const NavBar = () => {
           </button>
           <a href="#contact" className="flex cursor-pointer hover:opacity-80">
             <img
-              src="/images/contact-us.png"
+              src="/images/contact-us.webp"
               alt="contact icon"
               className="p-1.5 md:w-8 w-6 h-auto transition object-contain border-1 border-white"
               style={{ borderRadius: "6px 0 6px 0" }}

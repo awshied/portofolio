@@ -38,7 +38,7 @@ const GlowCards = ({ card, children, index }) => {
           ))}
         </div>
         <div className="flex items-center md:gap-3 gap-2">
-          <img src="/images/location.png" className="w-3" />
+          <img src="/images/location.webp" className="w-3" />
           <p className="text-white-25 font-medium">{card.location}</p>
         </div>
       </div>

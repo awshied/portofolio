@@ -15,12 +15,11 @@ const ExperienceSection = () => {
         xPercent: -100,
         opacity: 0,
         transformOrigin: "left left",
-        duration: 0.5,
+        duration: 1,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: card,
           start: "top 80%",
-          once: true,
         },
       });
     });
@@ -32,7 +31,6 @@ const ExperienceSection = () => {
         trigger: ".timeline",
         start: "top center",
         end: "70% center",
-        once: true,
         onUpdate: (self) => {
           gsap.to(".timeline", {
             scaleY: 1 - self.progress,
@@ -45,12 +43,11 @@ const ExperienceSection = () => {
       gsap.from(text, {
         xPercent: 0,
         opacity: 0,
-        duration: 0.5,
+        duration: 1,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: text,
           start: "top 60%",
-          once: true,
         },
       });
     });

@@ -18,14 +18,14 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "Ide", imgPath: "/images/ide.png" },
-  { text: "Konsep", imgPath: "/images/konsep.png" },
-  { text: "Desain", imgPath: "/images/desain.png" },
-  { text: "Kode", imgPath: "/images/coding.png" },
-  { text: "Ide", imgPath: "/images/ide.png" },
-  { text: "Konsep", imgPath: "/images/konsep.png" },
-  { text: "Desain", imgPath: "/images/desain.png" },
-  { text: "Kode", imgPath: "/images/coding.png" },
+  { text: "Ide", imgPath: "/images/ide.webp" },
+  { text: "Konsep", imgPath: "/images/konsep.webp" },
+  { text: "Desain", imgPath: "/images/desain.webp" },
+  { text: "Kode", imgPath: "/images/coding.webp" },
+  { text: "Ide", imgPath: "/images/ide.webp" },
+  { text: "Konsep", imgPath: "/images/konsep.webp" },
+  { text: "Desain", imgPath: "/images/desain.webp" },
+  { text: "Kode", imgPath: "/images/coding.webp" },
 ];
 
 const variables = [
@@ -43,19 +43,19 @@ const counterItems = [
   {
     value: 1,
     suffix: "+",
-    imgPath: "/images/pengalaman.png",
+    imgPath: "/images/pengalaman.webp",
     label: "Tahun Pengalaman",
   },
   {
     value: 9,
     suffix: "+",
-    imgPath: "/images/klien-puas.png",
+    imgPath: "/images/klien-puas.webp",
     label: "Klien Puas",
   },
   {
     value: 11,
     suffix: "+",
-    imgPath: "/images/proyek-selesai.png",
+    imgPath: "/images/proyek-selesai.webp",
     label: "Proyek Selesai",
   },
 ];
@@ -64,28 +64,28 @@ const percentages = [
   {
     id: 1,
     role: "Data Visualization",
-    iconPath: "/images/visualisasi_data.png",
+    iconPath: "/images/visualisasi_data.webp",
     languagePercentage: [
       {
-        languageImg: "/images/Matplotlib-fill.png",
+        languageImg: "/images/Matplotlib-fill.webp",
         name: "Matplotlib",
         statsBar: 62,
         value: 62,
       },
       {
-        languageImg: "/images/Seaborn-fill.png",
+        languageImg: "/images/Seaborn-fill.webp",
         name: "Seaborn",
         statsBar: 21,
         value: 21,
       },
       {
-        languageImg: "/images/Phpchart-fill.png",
-        name: "Php Chart",
+        languageImg: "/images/D3js-fill.webp",
+        name: "D3.js",
         statsBar: 47,
         value: 47,
       },
       {
-        languageImg: "/images/Chartjs-fill.png",
+        languageImg: "/images/Chartjs-fill.webp",
         name: "Chart.js",
         statsBar: 53,
         value: 53,
@@ -98,62 +98,62 @@ const percentages = [
   {
     id: 2,
     role: "Mobile App",
-    iconPath: "/images/aplikasi_mobile.png",
+    iconPath: "/images/aplikasi_mobile.webp",
     languagePercentage: [
       {
-        languageImg: "/images/React.png",
+        languageImg: "/images/React.webp",
         name: "React-Native",
-        statsBar: 82,
-        value: 82,
+        statsBar: 80,
+        value: 80,
       },
       {
-        languageImg: "/images/Flutter.png",
+        languageImg: "/images/Flutter.webp",
         name: "Flutter",
         statsBar: 55,
         value: 55,
       },
       {
-        languageImg: "/images/Mongodb-fill.png",
+        languageImg: "/images/Mongodb-fill.webp",
         name: "MongoDB",
-        statsBar: 75,
-        value: 75,
+        statsBar: 64,
+        value: 64,
       },
       {
-        languageImg: "/images/Firebase-fill.png",
+        languageImg: "/images/Firebase-fill.webp",
         name: "Firebase",
         statsBar: 88,
         value: 88,
       },
     ],
     recentProject: 3,
-    overall: 7.5,
+    overall: 7.2,
     status: "😐 Fair",
   },
   {
     id: 3,
     role: "Web Development",
-    iconPath: "/images/pengembangan_web.png",
+    iconPath: "/images/pengembangan_web.webp",
     languagePercentage: [
       {
-        languageImg: "/images/Typescript-fill.png",
+        languageImg: "/images/Typescript-fill.webp",
         name: "TypeScript",
         statsBar: 85,
         value: 85,
       },
       {
-        languageImg: "/images/Php-fill.png",
+        languageImg: "/images/Php-fill.webp",
         name: "Php",
         statsBar: 64,
         value: 64,
       },
       {
-        languageImg: "/images/Postgresql-fill.png",
+        languageImg: "/images/Postgres-fill.webp",
         name: "PostgreSQL",
         statsBar: 77,
         value: 77,
       },
       {
-        languageImg: "/images/Mysql-fill.png",
+        languageImg: "/images/Mysql-fill.webp",
         name: "MySQL",
         statsBar: 73,
         value: 73,
@@ -166,28 +166,28 @@ const percentages = [
   {
     id: 4,
     role: "Desktop App",
-    iconPath: "/images/aplikasi_desktop.png",
+    iconPath: "/images/aplikasi_desktop.webp",
     languagePercentage: [
       {
-        languageImg: "/images/electronjs-fill.png",
+        languageImg: "/images/Electronjs-fill.webp",
         name: "Electron.js",
         statsBar: 50,
         value: 50,
       },
       {
-        languageImg: "/images/tkinter-fill.png",
+        languageImg: "/images/Tkinter-fill.webp",
         name: "Tkinter",
         statsBar: 45,
         value: 45,
       },
       {
-        languageImg: "/images/sql-server-fill.png",
+        languageImg: "/images/Sqlserver-fill.webp",
         name: "SQL Server",
         statsBar: 52,
         value: 52,
       },
       {
-        languageImg: "/images/oracle-fill.png",
+        languageImg: "/images/Oracle-fill.webp",
         name: "Oracle",
         statsBar: 56,
         value: 56,
@@ -201,58 +201,58 @@ const percentages = [
 
 const logoIconsList = [
   {
-    imgPath: "/images/logos/company-logo-1.png",
+    imgPath: "/images/logos/company-logo-1.webp",
   },
   {
-    imgPath: "/images/logos/company-logo-2.png",
+    imgPath: "/images/logos/company-logo-2.webp",
   },
   {
-    imgPath: "/images/logos/company-logo-3.png",
+    imgPath: "/images/logos/company-logo-3.webp",
   },
   {
-    imgPath: "/images/logos/company-logo-4.png",
+    imgPath: "/images/logos/company-logo-4.webp",
   },
   {
-    imgPath: "/images/logos/company-logo-5.png",
+    imgPath: "/images/logos/company-logo-5.webp",
   },
   {
-    imgPath: "/images/logos/company-logo-6.png",
+    imgPath: "/images/logos/company-logo-6.webp",
   },
   {
-    imgPath: "/images/logos/company-logo-7.png",
+    imgPath: "/images/logos/company-logo-7.webp",
   },
   {
-    imgPath: "/images/logos/company-logo-8.png",
+    imgPath: "/images/logos/company-logo-8.webp",
   },
   {
-    imgPath: "/images/logos/company-logo-9.png",
+    imgPath: "/images/logos/company-logo-9.webp",
   },
   {
-    imgPath: "/images/logos/company-logo-10.png",
+    imgPath: "/images/logos/company-logo-10.webp",
   },
   {
-    imgPath: "/images/logos/company-logo-11.png",
+    imgPath: "/images/logos/company-logo-11.webp",
   },
 ];
 
 const abilities = [
   {
-    imgPath: "/images/data-visualization.png",
+    imgPath: "/images/data-visualization.webp",
     title: "Data Visualization",
     desc: "Pembuatan visualisasi data yang interaktif dan informatif menggunakan beberapa pustaka dalam pengambilan keputusan berbasis data.",
   },
   {
-    imgPath: "/images/mobile-app.png",
+    imgPath: "/images/mobile-app.webp",
     title: "Mobile App",
     desc: "Pengembangan aplikasi mobile yang responsif untuk memenuhi kebutuhan spesifik pengguna di berbagai platform seperti Android dan iOS.",
   },
   {
-    imgPath: "/images/web-development.png",
+    imgPath: "/images/web-development.webp",
     title: "Web Development",
     desc: "Pembangunan dan desain website yang dinamis dengan memperhatikan fungsionalitas yang kuat pada berbagai perangkat.",
   },
   {
-    imgPath: "/images/desktop-app.png",
+    imgPath: "/images/dekstop-app.webp",
     title: "Desktop App",
     desc: "Pengembangan aplikasi desktop cross-platform pada operation system yang stabil dan efisien untuk mendukung produktivitas secara lokal.",
   },
@@ -318,8 +318,8 @@ const expCards = [
   {
     review:
       "Kemampuannya dalam pengembangan aplikasi mobile menunjukkan efisiensi yang baik. Aryo berdedikasi untuk mencoba teknologi baru yang memberinya nilai tambah dalam membangun proyek.",
-    imgPath: "/images/react-native-exp.png",
-    logoPath: "/images/React.png",
+    imgPath: "/images/react-native-exp.webp",
+    logoPath: "/images/React.webp",
     location: "Kamboja",
     role: "Mobile App",
     title: "Food Order & Delivery",
@@ -332,8 +332,8 @@ const expCards = [
   {
     review:
       "Oke dia cukup mampu menggabungkan fitur visualisasi data dan enkripsi dalam proyek berbasis web.",
-    imgPath: "/images/angular-exp.png",
-    logoPath: "/images/Angular.png",
+    imgPath: "/images/angular-exp.webp",
+    logoPath: "/images/Angular.webp",
     location: "Indonesia",
     role: "Web",
     title: "Inventory & Project Management",
@@ -347,8 +347,8 @@ const expCards = [
   {
     review:
       "Dia bisa ngebangun game edukatif berbasis memori yang kece sama ga berat. Terus juga logika permainan yang dibuat ga kaleng-kaleng, tingkat kesulitannya juga yang bikin game ini terasa seru & lebih menantang.",
-    imgPath: "/images/flutter-exp.png",
-    logoPath: "/images/Flutter.png",
+    imgPath: "/images/flutter-exp.webp",
+    logoPath: "/images/Flutter.webp",
     location: "Indonesia",
     role: "Mobile App",
     title: "Memory Game",
@@ -383,7 +383,7 @@ const testimonials = [
     location: "Australia",
     review:
       "Aryo menunjukkan kemampuan yang cukup baik meskipun baru terjun ke dunia pemrograman. Dia berhasil mengubah kebutuhan proyek kami yang kompleks menjadi website yang fungsional dan mudah digunakan.",
-    imgPath: "/images/client1.png",
+    imgPath: "/images/client1.webp",
   },
   {
     name: "Bagas Dwi",
@@ -391,7 +391,7 @@ const testimonials = [
     location: "Indonesia",
     review:
       "Doi ngebawa sentuhan segar ke website yang gue minta. Gue puas banget sama hasilnya.",
-    imgPath: "/images/client2.png",
+    imgPath: "/images/client2.webp",
   },
   {
     name: "Tovan Galantra",
@@ -399,22 +399,22 @@ const testimonials = [
     location: "Indonesia",
     review:
       "Walau hasilnya ga seberapa, tapi gua yakin dia punya dedikasi penuh buat ngembangin potensi dirinya lebih jauh lagi. Semangat bre!!!",
-    imgPath: "/images/client3.png",
+    imgPath: "/images/client3.webp",
   },
   {
     name: "Thùy Phương",
     mentions: "@_Phươnggg.",
     location: "Vietnam",
     review:
-      "Aryo dengan cepat memahami kebutuhan yang diminta dan mampu menghadirkan aplikasi mobile yang tidak hanya sesuai harapan, tapi melebihi ekspektasi. Ia cukup andal di sisi frontend dan backend.",
-    imgPath: "/images/client00.png",
+      "Dia dengan cepat memahami kebutuhan yang diminta dan mampu menghadirkan aplikasi mobile yang tidak hanya sesuai harapan, tapi melebihi ekspektasi. Ia cukup andal di sisi frontend dan backend.",
+    imgPath: "/images/client00.webp",
   },
   {
     name: "Alan",
     mentions: "@msbreewclover",
     location: "Indonesia",
     review: "Mantep we.",
-    imgPath: "/images/client00.png",
+    imgPath: "/images/client00.webp",
   },
   {
     name: "Ponel",
@@ -422,7 +422,7 @@ const testimonials = [
     location: "Indonesia",
     review:
       "Goodjob bro! Hasil lo bikin gw lumayan puas si... Ada beberapa fitur yang lo masukin padahal gw ga minta... Which is bagus si bro, cuma gw kasian aja ama lu nya.",
-    imgPath: "/images/client6.png",
+    imgPath: "/images/client6.webp",
   },
 ];
 
@@ -430,17 +430,17 @@ const socialImgs = [
   {
     name: "Instagram",
     url: "https://www.instagram.com/cherrrrrrrryy__/",
-    imgPath: "/images/instagram.png",
+    imgPath: "/images/instagram.webp",
   },
   {
     name: "Linkedin",
     url: "https://www.linkedin.com/in/aryo-wibisono-93449b372/",
-    imgPath: "/images/linkedin.png",
+    imgPath: "/images/linkedin.webp",
   },
   {
     name: "Github",
-    url: "https://github.com/awshied/",
-    imgPath: "/images/github.png",
+    url: "https://github.com/awshied/portofolio",
+    imgPath: "/images/github.webp",
   },
 ];
 

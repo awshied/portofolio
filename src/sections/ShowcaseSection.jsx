@@ -28,12 +28,11 @@ const ShowcaseSection = () => {
         {
           y: 0,
           opacity: 1,
-          duration: 0.5,
-          delay: 0.1 * index,
+          duration: 1,
+          delay: 0.3 * (index + 1),
           scrollTrigger: {
             trigger: card,
             start: "top bottom-=100",
-            once: true,
           },
         }
       );
@@ -41,7 +40,7 @@ const ShowcaseSection = () => {
     gsap.fromTo(
       sectionRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 0.8 }
+      { opacity: 1, duration: 1.5 }
     );
   }, []);
 
@@ -52,7 +51,7 @@ const ShowcaseSection = () => {
           {/* KIRI */}
           <div className="first-project-wrapper" ref={project1Ref}>
             <div className="image-wrapper">
-              <img src="/images/Proyek1.png" alt="RentState" />
+              <img src="/images/Proyek1.webp" alt="RentState" />
             </div>
             <div className="text-content">
               <h2
@@ -78,32 +77,32 @@ const ShowcaseSection = () => {
               </p>
               <div className="items-center justify-center lg:justify-start flex w-full gap-2 lg:gap-3">
                 <img
-                  src="/images/Typescript.png"
+                  src="/images/Typescript.webp"
                   className="p-2.5 h-auto w-11 lg:w-12"
                   alt="typescript"
                 />
                 <img
-                  src="/images/Nextjs.svg"
+                  src="/images/Nextjs.webp"
                   className="p-1 h-auto w-11 lg:w-12"
                   alt="nextjs"
                 />
                 <img
-                  src="/images/Express.svg"
+                  src="/images/Expressjs.webp"
                   className="p-2 h-auto w-11 lg:w-12"
                   alt="expressjs"
                 />
                 <img
-                  src="/images/Postgre.svg"
+                  src="/images/Postgres.webp"
                   className="p-2 h-auto w-11 lg:w-12"
                   alt="postgresql"
                 />
                 <img
-                  src="/images/Tailwindcss.svg"
+                  src="/images/Tailwindcss.webp"
                   className="p-2 h-auto w-11 lg:w-12"
                   alt="tailwindcss"
                 />
                 <img
-                  src="/images/aws.svg"
+                  src="/images/Aws.webp"
                   className="p-2 h-auto w-11 lg:w-12"
                   alt="aws"
                 />
@@ -116,7 +115,7 @@ const ShowcaseSection = () => {
             <div className="project" ref={project2Ref}>
               <div className="image-wrapper bg-blue-200">
                 <img
-                  src="/images/Proyek2.png"
+                  src="/images/Proyek2.webp"
                   alt="Adinda Fotocopy Management"
                 />
               </div>
@@ -145,32 +144,32 @@ const ShowcaseSection = () => {
 
                 <div className="items-center justify-center lg:justify-start flex w-full gap-2">
                   <img
-                    src="/images/Javascript.png"
+                    src="/images/Javascript.webp"
                     className="p-2.5 h-auto w-11"
                     alt="javascript"
                   />
                   <img
-                    src="/images/Vue.png"
+                    src="/images/Vuejs.webp"
                     className="p-2 h-auto w-11"
                     alt="vuejs"
                   />
                   <img
-                    src="/images/Express.svg"
+                    src="/images/Expressjs.webp"
                     className="p-2 h-auto w-11"
                     alt="expressjs"
                   />
                   <img
-                    src="/images/Mongodb.png"
+                    src="/images/Mongodb.webp"
                     className="p-2 h-auto w-11"
                     alt="nosql"
                   />
                   <img
-                    src="/images/Tailwindcss.svg"
+                    src="/images/Tailwindcss.webp"
                     className="p-2 h-auto w-11"
                     alt="tailwindcss"
                   />
                   <img
-                    src="/images/Auth.svg"
+                    src="/images/Authjs.webp"
                     className="p-2 h-auto w-11"
                     alt="authjs"
                   />
@@ -179,7 +178,7 @@ const ShowcaseSection = () => {
             </div>
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-blue-200">
-                <img src="/images/Proyek3.png" alt="HCI Learning Center" />
+                <img src="/images/Proyek3.webp" alt="HCI Learning Center" />
               </div>
               <div className="gap-2 flex flex-col">
                 <h2
@@ -205,32 +204,32 @@ const ShowcaseSection = () => {
 
                 <div className="items-center justify-center lg:justify-start flex w-full gap-2">
                   <img
-                    src="/images/Php.png"
+                    src="/images/Php.webp"
                     className="p-1.5 h-auto w-11"
                     alt="php"
                   />
                   <img
-                    src="/images/Jquery.png"
+                    src="/images/Jquery.webp"
                     className="lg:p-1 p-1.5 h-auto w-11 lg:w-12"
                     alt="jquery"
                   />
                   <img
-                    src="/images/Laravel.svg"
+                    src="/images/Laravel.webp"
                     className="p-2 h-auto w-11"
                     alt="laravel"
                   />
                   <img
-                    src="/images/Mysql.svg"
+                    src="/images/Mysql.webp"
                     className="p-1.5 h-auto w-11"
                     alt="mysql"
                   />
                   <img
-                    src="/images/Tailwindcss.svg"
+                    src="/images/Tailwindcss.webp"
                     className="p-2 h-auto w-11"
                     alt="tailwindcss"
                   />
                   <img
-                    src="/images/Bootstrap.png"
+                    src="/images/Bootstrap.webp"
                     className="p-2 h-auto w-11"
                     alt="bootstrap"
                   />

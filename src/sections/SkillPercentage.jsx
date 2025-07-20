@@ -17,19 +17,19 @@ const SkillPercentage = () => {
 
   const StatBar = ({ label, name, value }) => {
     return (
-      <div className="mb-4">
+      <div className="mb-2 md:mb-4">
         <div className="flex justify-between items-center text-xs sm:text-sm mb-3">
           <span className="flex items-center gap-3">
             <img
               src={label}
               alt="icon"
-              className="h-4 w-4 sm:h-7 sm:w-7 object-contain"
+              className="h-5.5 w-5.5 md:h-7 md:w-7 object-contain"
             />
-            <span className="text-white-25 truncate md:text-[16px] text-[10px]">
+            <span className="text-white-25 truncate md:text-[16px] text-[14px]">
               {name}
             </span>
           </span>
-          <span className="md:text-[16px] text-[10px]">{value}%</span>
+          <span className="md:text-[16px] text-[14px]">{value}%</span>
         </div>
         <div className="w-full bg-gray-600 rounded-full h-2">
           <div
@@ -48,13 +48,12 @@ const SkillPercentage = () => {
       gsap.from(".skill-section", {
         opacity: 0,
         y: 50,
-        duration: 0.5,
+        duration: 1,
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".skill-section",
-          start: "top 80%",
-          once: true,
-          toggleActions: "play none none reverse",
+          start: "top 80%", // mulai saat 80% dari viewport
+          toggleActions: "play none none reverse", // animasi hanya saat masuk
         },
       });
     });
@@ -118,7 +117,7 @@ const SkillPercentage = () => {
                       <span>Status : {percentage.status}</span>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-3 md:gap-6">
+                    <div className="grid md:grid-cols-2 grid-cols-1 gap-3 md:gap-6">
                       {percentage.languagePercentage.map((lang, index) => (
                         <StatBar
                           key={index}
@@ -135,7 +134,7 @@ const SkillPercentage = () => {
           </Swiper>
 
           {/* Navigasi icon di bawah */}
-          <div className="flex flex-row flex-wrap justify-center gap-4 md:gap-6 md:mt-6 lg:mt-2">
+          <div className="flex flex-row flex-wrap justify-center gap-4 md:gap-6 mt-4 md:mt-6 lg:mt-2">
             {percentages.map((percentage, index) => (
               <button
                 key={percentage.id}
@@ -143,7 +142,7 @@ const SkillPercentage = () => {
                 className="group flex flex-col items-center cursor-pointer"
               >
                 <div
-                  className={`w-8 h-8 sm:w-10 sm:h-10 p-1 rounded-full transition-all duration-300 ${
+                  className={`w-10 h-10 md:w-12 md:h-12 p-1 rounded-full transition-all duration-300 ${
                     activeIndex === index
                       ? "ring-2 ring-purple-400 scale-110"
                       : "opacity-60 hover:opacity-100"
