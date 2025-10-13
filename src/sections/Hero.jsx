@@ -157,8 +157,8 @@ const Hero = () => {
         {/* Kanan */}
         <figure className="w-full lg:w-1/2 flex justify-center items-center lg:translate-y-none">
           <img
-            src="/images/Minion.webp"
-            alt="Hero Minion"
+            src="/images/Me.webp"
+            alt="Hero Me"
             loading="lazy"
             className="absolute top-75 md:top-90 lg:top-30 xl:top-15 object-contain w-[300px] md:w-[600px] lg:w-[450px]"
           />
