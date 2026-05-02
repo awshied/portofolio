@@ -26,11 +26,10 @@ const FeatureCards = () => {
               trigger: card,
               start: "top 85%",
             },
-          }
+          },
         );
       });
 
-      // Optional: fade in seluruh section
       gsap.fromTo(
         sectionRef.current,
         { opacity: 0 },
@@ -42,10 +41,10 @@ const FeatureCards = () => {
             trigger: sectionRef.current,
             start: "top 90%",
           },
-        }
+        },
       );
     });
-    return () => ctx.revert(); // cleanup on unmount
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -60,7 +59,6 @@ const FeatureCards = () => {
               key={title}
               className="card-feature relative bg-transparent border-2 border-gold-100 rounded-xl p-6 pt-10 shadow-[12px_8px_15px_rgba(0,0,0,0.6)]"
             >
-              {/* Ikon melayang di luar border kiri atas */}
               <div className="absolute -top-6 -left-6 w-[56px] h-[56px] md:w-[67px] md:h-[67px] bg-blue-150 border-2 border-gold-100 rounded-full flex items-center justify-center z-10">
                 <img
                   src={imgPath}
@@ -69,7 +67,6 @@ const FeatureCards = () => {
                 />
               </div>
 
-              {/* Konten dalam card */}
               <div className="pl-[10px]">
                 <h3
                   className="text-gold-100 text-[14px] md:text-lg font-semibold mb-2"

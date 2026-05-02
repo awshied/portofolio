@@ -144,7 +144,8 @@ section {
     white-space: nowrap;
     border-right: 2px solid black;
     width: 0ch;
-    animation: typewriter 4s steps(40) infinite normal both,
+    animation:
+      typewriter 4s steps(40) infinite normal both,
       blink 0.7s step-end infinite;
   }
 
@@ -244,7 +245,7 @@ section {
     }
 
     .first-project-wrapper {
-      @apply h-full flex flex-col justify-between xl:w-[60%];
+      @apply h-full flex flex-col justify-between;
 
       .image-wrapper {
         @apply p-2 lg:h-[103vh] md:h-120 h-96 relative;
@@ -264,7 +265,7 @@ section {
     }
 
     .project-list-wrapper {
-      @apply flex md:flex-row flex-col xl:flex-col gap-10 xl:w-[40%];
+      @apply flex md:grid md:grid-cols-2 flex-col xl:flex xl:flex-col gap-10 xl:w-[40%];
 
       .image-wrapper {
         @apply xl:h-[37vh] md:h-52 lg:h-72 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0;
@@ -503,7 +504,8 @@ section {
   border: 2px solid transparent;
   background: var(--gradient);
   background-attachment: fixed;
-  mask: linear-gradient(#0000, #0000),
+  mask:
+    linear-gradient(#0000, #0000),
     conic-gradient(
       from calc((var(--start) - 15) * 1deg),
       #ffffff1f 0deg,

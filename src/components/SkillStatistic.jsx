@@ -20,7 +20,7 @@ ChartJS.register(
   Filler,
   Tooltip,
   Legend,
-  Title
+  Title,
 );
 
 ChartJS.defaults.plugins.tooltip.enabled = true;
@@ -69,7 +69,7 @@ const SkillStatistic = ({ roleData }) => {
   }
 
   const labels = roleData.languagePercentage.map((lang) =>
-    typeof lang === "object" ? lang.name || lang.label || "Unknown" : "Unknown"
+    typeof lang === "object" ? lang.name || lang.label || "Unknown" : "Unknown",
   );
 
   const values = roleData.languagePercentage.map((lang) => {
@@ -149,10 +149,10 @@ const SkillStatistic = ({ roleData }) => {
     plugins: {
       tooltip: {
         enabled: true,
-        backgroundColor: "rgba(0, 0, 0, 0.9)",
-        titleColor: "#ffffff",
+        backgroundColor: "#2f363d",
+        titleColor: "#ffbe82",
         bodyColor: "#ffffff",
-        borderColor: "rgba(147, 51, 234, 1)",
+        borderColor: "rgba(147, 51, 234, 0.8)",
         borderWidth: 2,
         cornerRadius: 8,
         displayColors: false,
@@ -205,7 +205,7 @@ SkillStatistic.propTypes = {
         value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         percentage: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         values: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-      })
+      }),
     ),
   }),
 };

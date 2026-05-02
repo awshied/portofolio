@@ -7,11 +7,7 @@ import gsap from "gsap";
 
 const Hero = () => {
   const audioRef = useRef(null);
-  const texts = [
-    "Front-End Beginner",
-    "Back-End Beginner",
-    "Freelance Developer",
-  ];
+  const texts = ["Web Developer", "Mobile App Developer", "Software Analyst"];
   const [textIndex, setTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
@@ -29,7 +25,7 @@ const Hero = () => {
     gsap.fromTo(
       ".hero-text h1",
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
+      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" },
     );
   });
 
@@ -117,7 +113,7 @@ const Hero = () => {
               <audio ref={audioRef} src="/sounds/aivoice.mp3" preload="auto" />
               <div className="separator"></div>
               <small
-                className="text-white text-lg md:text-2xl lg:text-3xl py-2 font-semibold"
+                className="text-white text-base md:text-xl lg:text-3xl py-2 font-semibold"
                 style={{
                   fontFamily: "var(--font-poppins)",
                   textShadow: "10px 10px 5px hsla(0, 0%, 0%, 1)",
@@ -146,22 +142,24 @@ const Hero = () => {
                 delay={5000}
               />
             </p>
-            {/* <p
+            <p
               className="text-white md:text-[16px] text-[13px] relative z-10 pointer-events-none"
               style={{ textShadow: "10px 10px 5px hsla(0, 0%, 0%, 1)" }}
             >
-              ~ Kata Gue
-            </p> */}
+              ~ Vibe Coder
+            </p>
           </div>
         </header>
         {/* Kanan */}
-        <figure className="w-full lg:w-1/2 flex justify-center items-center lg:translate-y-none">
-          <img
-            src="/images/Me.webp"
-            alt="Hero Me"
-            loading="lazy"
-            className="absolute top-75 md:top-90 lg:top-30 xl:top-15 object-contain w-[300px] md:w-[600px] lg:w-[450px]"
-          />
+        <figure className="w-full bg-amber-50 lg:w-1/2 lg:translate-y-none flex justify-center items-center">
+          <div className="absolute top-90 md:top-140 lg:top-30 xl:top-20 h-[360px] md:h-[460px] lg:h-[420px] w-[250px] md:w-[300px] lg:w-[280px] bg-blue-150 flex justify-center items-center rounded-full overflow-hidden border-2 border-purple-500">
+            <img
+              src="/images/gambar-gueh.png"
+              alt="Hero Me"
+              loading="lazy"
+              className="object-contain w-[250px] md:w-[600px] lg:w-[320px]"
+            />
+          </div>
         </figure>
       </div>
       <AnimatedCounter />

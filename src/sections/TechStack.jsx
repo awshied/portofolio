@@ -24,22 +24,19 @@ const TechStack = () => {
           start: "top center",
           once: true,
         },
-      }
+      },
     );
   });
 
   return (
-    <section
-      id="skills"
-      className="hidden md:flex justify-center items-center section-padding"
-    >
+    <section className="hidden md:flex justify-center items-center section-padding">
       <div
         className="w-full h-full md:px-10 px-5"
         style={{ fontFamily: "var(--font-poppins)" }}
       >
         <TitleHeader
           title="Tech Stack Favorit"
-          sub="💲 Kemampuan yang Ditawarkan"
+          sub="💲 Kumpulan Teknologi Pilihan"
         />
 
         <div className="tech-grid">

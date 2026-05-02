@@ -52,24 +52,27 @@ const SkillPercentage = () => {
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".skill-section",
-          start: "top 80%", // mulai saat 80% dari viewport
-          toggleActions: "play none none reverse", // animasi hanya saat masuk
+          start: "top 80%",
+          toggleActions: "play none none reverse",
         },
       });
     });
 
-    return () => ctx.revert(); // membersihkan animasi saat unmount
+    return () => ctx.revert();
   }, []);
 
   return (
-    <section className="flex-center lg:px-10 md:mt-40 mt-20 skill-section">
+    <section
+      id="skills"
+      className="flex-center lg:px-10 md:mt-40 mt-20 skill-section"
+    >
       <div
         className="w-full h-full lg:px-10"
         style={{ fontFamily: "var(--font-poppins)" }}
       >
         <TitleHeader
           title="Persentase Kemampuan"
-          sub="🛠️ Nilai Kemampuan Individu"
+          sub="🛠️ Kemampuan pada Masing-Masing Teknologi"
         />
 
         <div className="relative mx-auto mt-10 sm:mt-14 md:mt-16">
@@ -161,7 +164,7 @@ const SkillPercentage = () => {
                       : "text-white-25"
                   }`}
                 >
-                  {percentage.role}
+                  {percentage.shortTitle}
                 </span>
               </button>
             ))}
