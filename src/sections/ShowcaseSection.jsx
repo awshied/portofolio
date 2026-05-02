@@ -138,9 +138,9 @@ const ShowcaseSection = () => {
                     fontWeight: 500,
                   }}
                 >
-                  Dibangun dengan JavaScript, React-Natiive, Express.js,
-                  MongoDB, Tailwind CSS, dan Expo dengan tampilan modern dan
-                  engaging bagi semua kalangan pengguna.
+                  Dibangun dengan JavaScript, React-Native, Express.js, MongoDB,
+                  Tailwind CSS, dan Expo dengan tampilan modern dan engaging
+                  bagi semua kalangan pengguna.
                 </p>
                 <div className="items-center justify-center lg:justify-start flex w-full gap-2 lg:gap-3">
                   <img

@@ -156,7 +156,7 @@ const Hero = () => {
             <img
               src="/images/gambar-gueh.png"
               alt="Hero Me"
-              loading="lazy"
+              loading="eager"
               className="object-contain w-[250px] md:w-[600px] lg:w-[320px]"
             />
           </div>
