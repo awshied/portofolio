@@ -152,12 +152,12 @@ const Hero = () => {
         </header>
         {/* Kanan */}
         <figure className="w-full bg-amber-50 lg:w-1/2 lg:translate-y-none flex justify-center items-center">
-          <div className="absolute top-90 md:top-140 lg:top-30 xl:top-20 h-[360px] md:h-[460px] lg:h-[420px] w-[250px] md:w-[300px] lg:w-[280px] bg-blue-150 flex justify-center items-center rounded-full overflow-hidden border-2 border-purple-500">
+          <div className="absolute top-90 md:top-140 lg:top-30 xl:top-20 h-[320px] md:h-[460px] lg:h-[420px] w-[200px] md:w-[300px] lg:w-[280px] bg-blue-150 flex justify-center items-center rounded-full overflow-hidden border-2 border-purple-500">
             <img
               src="/images/gambar-gueh.png"
               alt="Hero Me"
               loading="eager"
-              className="object-contain w-[250px] md:w-[600px] lg:w-[320px]"
+              className="object-contain w-[200px] md:w-[600px] lg:w-[320px]"
             />
           </div>
         </figure>
